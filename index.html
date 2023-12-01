@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Libros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- se crea un h1 para el encabezado de la pagina -->
+    <h1 style="text-align: center;">Bienvenidos a la tienda de libros</h1>
+<!-- Contenedor principal con identificador "container" -->
+    <div id="container">
+      <!-- Elemento con clase "book" y atributos del libro-->
+        <div class="book" data-id="1" data-name="Libro 1" data-price="20.000">
+          <!-- Imagen del libro 1 con texto alternativo -->
+            <img src="img/producto1.jpg" alt="Libro 1">
+            <!-- se realiza un contenedor de información del libro -->
+            <div class="book-info">
+            <!-- se realiza un h3 para el Título del libro -->
+                <h3>El Libro de la Verdad</h3>
+                <!-- Precio del libro -->
+                <p>Precio: $20.000</p>
+                <!--elemento para mostrar el subtotal -->
+                <p id="subtotal1">Subtotal: $00.000</p>
+            </div>
+            <div class="counter">
+                <button class="count-btn" onclick="decremento(1)">-</button>
+                <span id="count1">0</span>
+                <button class="count-btn" onclick="incremento(1)">+</button>
+            </div>
+        </div>
+
+        <!-- Libro 2 -->
+        <div class="book" data-id="2" data-name="Libro 2" data-price="15.000">
+            <img src="img/producto2.jpg" alt="Libro 2">
+            <div class="book-info">
+              <!-- se realiza un h3 para el Título del libro -->
+                <h3>Verdad care santos</h3>
+                <!-- Precio del libro -->
+                <p>Precio: $15.000</p>
+                <!--elemento para mostrar el subtotal -->
+                <p id="subtotal2">Subtotal: $00.000</p>
+            </div>
+            <div class="counter">
+                <button class="count-btn" onclick="decremento(2)">-</button>
+                <span id="count2">0</span>
+                <button class="count-btn" onclick="incremento(2)">+</button>
+            </div>
+        </div>
+
+        <!-- Libro 3 -->
+        <div class="book" data-id="3" data-name="Libro 3" data-price="25.000">
+            <img src="img/producto3.jpg" alt="Libro 3">
+            <div class="book-info">
+              <!-- se realiza un h3 para el Título del libro -->
+                <h3>El olvido que seremos</h3>
+                <!-- Precio del libro -->
+                <p>Precio: $25.000</p>
+                <!--elemento para mostrar el subtotal -->
+                <p id="subtotal3">Subtotal: $00.000</p>
+            </div>
+            <div class="counter">
+               <!-- Botón de decremento -->
+                <button class="count-btn" onclick="decremento(3)">-</button>
+                 <!-- Elemento donde se visualiza de cantidad de productos agregados  -->
+                <span id="count3">0</span>
+                <!-- Botón de incremento -->
+                <button class="count-btn" onclick="incremento(3)">+</button>
+            </div>
+        </div>
+
+        
+<!-- Botón para mostrar el carrito de compras -->
+        <button onclick="mostrarCarrito()">Carrito de compra</button>
+        <!-- Contenedor del carrito de compras -->
+        <div id="cart"></div>
+    </div>
+<!-- se realiza un script para llamar el archivo de javascript -->
+    <script src="js/libroCarrito.js"></script>
+</body>
+</html>
